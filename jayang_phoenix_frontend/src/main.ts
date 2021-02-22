@@ -5,7 +5,25 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 
+import VueProgressBar from 'vue-progressbar';
+
 Vue.config.productionTip = false;
+
+const options = {
+  color : 'blue',
+  failedColor: '#874b4b',
+  thickness: '3px',
+  transition: {
+    speed: '0.1s',
+    opacity: '0.3s',
+    termination: 300
+  },
+  autoRevert: true,
+  location: 'top',
+  inverse: false
+}
+Vue.config.productionTip = false;
+Vue.use(VueProgressBar, options);
 
 new Vue({
   router,
