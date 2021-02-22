@@ -1,4 +1,5 @@
 //Db connection 참고 - https://loy124.tistory.com/244?category=791817
+// https://github.com/velopert/mongoose_tutorial
 
 var createError = require('http-errors');
 var express = require('express');
