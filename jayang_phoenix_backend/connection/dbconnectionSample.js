@@ -1,4 +1,6 @@
-//https://poiemaweb.com/mongoose => API 연동 예제
+// https://poiemaweb.com/mongoose => API 연동 예제
+// https://codesource.io/setting-up-vue-authentication-using-expressjs-mongodb-and-jwt/
+// https://github.com/Dunebook/VueAuthapp - auth
 
 const express = require("express");
 const app = express();
@@ -11,13 +13,7 @@ app.use(bodyParser.json());
 
 const dbAddress = "mongodb+srv://kcu1436:ruddnjs11@@jayangphoenix.lx9yw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-mongoose
-    .connect(dbAddress, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
-        useFindAndModify: false,
-    })
+mongoose.connect(dbAddress, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false,})
     .then(() => console.log("MongoDB Connected"))
     .catch((err) => console.log(err));
 
