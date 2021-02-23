@@ -1,6 +1,8 @@
 // https://poiemaweb.com/mongoose => API 연동 예제
 // https://codesource.io/setting-up-vue-authentication-using-expressjs-mongodb-and-jwt/
 // https://github.com/Dunebook/VueAuthapp - auth
+// https://loy124.tistory.com/244?category=791817 - Db connection 참고
+// https://github.com/velopert/mongoose_tutorial
 
 const express = require("express");
 const app = express();
