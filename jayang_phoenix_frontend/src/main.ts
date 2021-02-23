@@ -22,7 +22,9 @@ const options = {
   location: 'top',
   inverse: false
 }
+
 Vue.config.productionTip = false;
+
 Vue.use(VueProgressBar, options);
 
 new Vue({
