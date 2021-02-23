@@ -2,8 +2,10 @@
 // https://github.com/velopert/mongoose_tutorial
 
 var createError = require('http-errors');
+var mongoose    = require('mongoose');
 var express = require('express');
 var path = require('path');
+var bodyParser  = require('body-parser');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
@@ -11,6 +13,12 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+var User = require('./user');
+var router = require('./router')(app,User)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,5 +48,17 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const dbAddress = "mongodb+srv://kcu1436:ruddnjs11@@jayangphoenix.lx9yw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+mongoose
+    .connect(dbAddress, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    })
+    .then(() => console.log("MongoDB Connected"))
+    .catch((err) => console.log(err));
 
 module.exports = app;
