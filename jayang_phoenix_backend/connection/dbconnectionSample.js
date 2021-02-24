@@ -3,6 +3,7 @@
 // https://github.com/Dunebook/VueAuthapp - auth
 // https://loy124.tistory.com/244?category=791817 - Db connection 참고
 // https://github.com/velopert/mongoose_tutorial
+// https://data-make.tistory.com/589 - vue JS 기본 정리
 
 const express = require("express");
 const app = express();

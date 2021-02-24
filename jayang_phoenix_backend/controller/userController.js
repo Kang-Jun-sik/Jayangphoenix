@@ -21,6 +21,7 @@ exports.registerNewUser = async (req, res) => {
         res.status(400).json({ err: err });
     }
 };
+
 exports.loginUser = async (req, res) => {
     try {
         const email = req.body.email;
@@ -37,6 +38,7 @@ exports.loginUser = async (req, res) => {
         res.status(400).json({ err: err });
     }
 };
+
 exports.getUserDetails = async (req, res) => {
     await res.json(req.userData);
 };
