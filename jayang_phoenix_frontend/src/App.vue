@@ -1,32 +1,28 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app id="vcrm">
+    <v-navigation-drawer class="blue lighten-5" mini-variant-width="70" width="250" light :mini-variant.sync="mini" v-model="drawer" app>
+    </v-navigation-drawer>
+    <v-footer :inset="true" style="justify-content:center; text-align: center" app>
+      <span>&copy; Jayang Phoenix 2021 </span>
+    </v-footer>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+<script lang="ts">
+import {Component, Prop} from 'vue-property-decorator';
+import Vue from 'vue';
+
+@Component
+export default class App extends Vue {
+  private mini = false;
+  public drawer = window.innerWidth > 960;
 }
 
-#nav {
-  padding: 30px;
-}
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+<style scoped>
+.avatar {
+  border-radius: 50%;
 }
 </style>
