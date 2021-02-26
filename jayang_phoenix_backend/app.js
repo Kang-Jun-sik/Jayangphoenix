@@ -19,9 +19,9 @@ mongoose
     .catch((err) => console.log(err));
 
 app.use(cors()); //registering cors
-app.use(bodyParser.urlencoded({ extended: false })); //configure body parser
+app.use(bodyParser.urlencoded({ extended: true })); //configure body parser
 app.use(bodyParser.json()); //configure body-parser ends here
-app.use(morgan("dev")); // configire morgan
+app.use(morgan("dev")); //configire morgan
 app.use("/user", userRoutes);
 
 app.get("/", (req, res) => {
