@@ -1,5 +1,6 @@
 <template>
   <v-app id="vcrm">
+    <router-view></router-view>
     <v-navigation-drawer class="blue lighten-5" mini-variant-width="70" width="250" light :mini-variant.sync="mini"
                          v-model="drawer" app>
       <v-list class="pa-0">

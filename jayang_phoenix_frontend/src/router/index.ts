@@ -16,7 +16,8 @@ const routes: Array<RouteConfig> = [
         component: DashBoard,
         name: "dashboard",
     },
-    {path: "/", redirect: "/dashboard"}
+    {path: "/", redirect: "/dashboard"},
+
 ];
 
 const router = new VueRouter({
