@@ -1,6 +1,6 @@
 <template>
+
   <v-app id="vcrm">
-    <router-view></router-view>
     <v-navigation-drawer class="blue lighten-5" mini-variant-width="70" width="250" light :mini-variant.sync="mini"
                          v-model="drawer" app>
       <v-list class="pa-0">
@@ -41,6 +41,7 @@
     <v-footer :inset="true" style="justify-content:center; text-align: center" app>
       <span>&copy; Jayang Phoenix 2021 </span>
     </v-footer>
+    <router-view></router-view>
   </v-app>
 </template>
 

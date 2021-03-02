@@ -2,5 +2,9 @@
   "name": "Jayangphoenix",
   "version": "1.0.0",
   "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "sweetalert": "^2.1.2",
+    "vue-jwt-decode": "^0.1.0"
   }
 }
