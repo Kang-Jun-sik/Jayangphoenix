@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
     outputDir: path.resolve(__dirname, "../jayang_phoenix_backend/public"), //build outputPath
-    transpileDependencies: ["vuetify"],
+    transpileDependencies: ['vuetify'],
     devServer: {
         proxy: {
             '/api': {
