@@ -37,7 +37,7 @@
               </v-flex>
             </v-layout>
             <v-card-actions>
-              <v-btn   elevation="4" type="submit">login</v-btn>
+              <v-btn elevation="4" type="submit">login</v-btn>
             </v-card-actions>
             <v-snackbar
               v-if="error"
@@ -49,7 +49,8 @@
             >
               {{ text }}
               <v-btn class="pink--text" text @click.native="error = false"
-                >Close</v-btn
+              >Close
+              </v-btn
               >
             </v-snackbar>
           </form>
@@ -60,8 +61,8 @@
 </template>
 <script lang="ts">
 import Vue from "vue";
-import { Component } from "vue-property-decorator";
-import { userModule } from "@/store/modules/user";
+import {Component} from "vue-property-decorator";
+import {userModule} from "@/store/modules/user";
 
 @Component
 export default class Login extends Vue {
@@ -75,7 +76,7 @@ export default class Login extends Vue {
   }
 
   public async login() {
-    await userModule.signIn({ username: this.email, password: this.pass });
+    await userModule.signIn({username: this.email, password: this.pass});
     this.$router.push("/");
   }
 }

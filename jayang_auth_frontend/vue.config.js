@@ -3,8 +3,6 @@ const path = require("path");
 module.exports = {
     outputDir: path.resolve(__dirname, "../jayang_phoenix_backend/public"), //build outputPath
     transpileDependencies: ["vuetify"],
-    //front-end [proxy-server / back-end API Server] Setting
-    /*
     devServer: {
         proxy: {
             '/api': {
@@ -12,7 +10,6 @@ module.exports = {
             }
         }
     },
-     */
     configureWebpack: {
         optimization: {
             splitChunks: false

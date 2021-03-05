@@ -8,8 +8,7 @@ const dbConfig = require("./connection/dbConfig")
 const userRoutes = require("./route/user"); //bring in our user routes
 
 mongoose.set("useCreateIndex", true);
-mongoose
-    .connect(dbConfig.dbAddress, {
+mongoose.connect(dbConfig.dbAddress, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
