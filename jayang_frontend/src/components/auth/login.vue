@@ -7,7 +7,8 @@
               @submit.prevent="loginUser">
           <input type="text" id="email" class="form-control mb-5" placeholder="Email" v-model="login.email">
           <!-- Password -->
-          <input type="password" id="password" class="form-control mb-5" placeholder="Password" v-model="login.password">
+          <input type="password" id="password" class="form-control mb-5" placeholder="Password"
+                 v-model="login.password">
           <p>
             Dont have an account??
             <router-link to="/register">click here</router-link>

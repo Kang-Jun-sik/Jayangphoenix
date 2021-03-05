@@ -31,6 +31,13 @@
               placeholder="Password"
               v-model="register.password"
           />
+          <input
+              type="password"
+              id="password_confirm"
+              class="form-control mb-5"
+              placeholder="Password Checking"
+              v-model="register.password_confirm"
+          />
           <p>
             Already have an account??
             <router-link to="/">click here</router-link>
@@ -55,13 +62,18 @@ export default {
       register: {
         name: "",
         email: "",
-        password: ""
+        password: "",
+        password_confirm:"",
       }
     };
   },
   methods: {
     async registerUser() {
       try {
+        if(this.register.password !== this.register.password_confirm){
+          swal("Error", "Password Checking error", "error");
+          return;
+        }
         let response = await this.$http.post("/user/register", this.register);
         console.log(response);
         let token = response.data.token;
