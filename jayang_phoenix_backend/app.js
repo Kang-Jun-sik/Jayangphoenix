@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
+const path = require("path");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
@@ -20,6 +21,7 @@ mongoose.connect(dbConfig.dbAddress, {
 app.use(cors()); //registering cors
 app.use(bodyParser.urlencoded({ extended: true })); //configure body parser
 app.use(bodyParser.json()); //configure body-parser ends here
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan("dev")); //configire morgan
 app.use("/user", userRoutes);
 
