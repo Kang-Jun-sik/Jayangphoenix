@@ -38,6 +38,7 @@ const routes: Array<RouteConfig> = [
   }
 ];
 
+/*
 function requireAuth(to: TODO, from: TODO, next: TODO) {
   console.log(`userModule.isSignedI ${userModule.isSignedIn}`);
   if (!userModule.isSignedIn) {
@@ -49,6 +50,7 @@ function requireAuth(to: TODO, from: TODO, next: TODO) {
     next();
   }
 }
+*/
 
 const router = new VueRouter({
   mode: "history",
